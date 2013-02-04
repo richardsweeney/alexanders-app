@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <head>
+
+        <meta charset="utf-8">
+        <title>Alexander's App!</title>
+        <!-- <meta name="viewport" content="width=device-width"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link rel="stylesheet" href="css/main.css">
+
+    </head>
+    <body>
+
+        <div id="app-container">
+            <section id="letters-container">
+                <!-- letters go here -->
+            </section>
+
+            <audio id="audio-sprite" src="mp3/sprite.mp3" preload="true"></audio>
+
+        </div>
+
+
+        <script type="text/template" id="letter-template">
+            <div class="letter front" style="color: {{ color }}">
+                {{ letter }}
+            </div>
+            <div class="image back">
+                <img src="img/{{ image }}">
+            </div>
+        </script>
+
+
+        <script src="js/zepto_underscore_backbone.js"></script>
+        <script src="js/app.js"></script>
+
+    </body>
+</html>

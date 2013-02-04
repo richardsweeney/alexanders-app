@@ -1,0 +1,94 @@
+/* line 3, ../sass/main.scss */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 9, ../sass/main.scss */
+body {
+  line-height: 1;
+  font-family: 'GillSans-Light';
+  font-weight: light;
+}
+
+/* line 16, ../sass/main.scss */
+#letters-container {
+  width: 32000px;
+  height: 500px;
+  position: relative;
+  top: 0;
+  -webkit-transition: left 0.2s ease;
+  -moz-transition: left 0.2s ease;
+  -ms-transition: left 0.2s ease;
+  -o-transition: left 0.2s ease;
+  transition: left 0.2s ease;
+}
+
+/* line 24, ../sass/main.scss */
+.letter-container {
+  position: relative;
+  display: block;
+  float: left;
+  width: 320px;
+  height: 460px;
+  -webkit-perspective: 460px;
+  perspective: 460px;
+}
+/* line 31, ../sass/main.scss */
+.letter-container div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  -moz-transition: -moz-transform 0.3s ease;
+  -ms-transition: -ms-transform 0.3s ease;
+  -o-transition: -o-transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+/* line 39, ../sass/main.scss */
+.letter-container div.letter {
+  background: #fff;
+  text-transform: uppercase;
+  font-size: 20rem;
+  margin-top: 40px;
+  text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.4);
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  -ms-transform: rotateX(0deg) rotateY(0deg);
+  -o-transform: rotateX(0deg) rotateY(0deg);
+  transform: rotateX(0deg) rotateY(0deg);
+}
+/* line 47, ../sass/main.scss */
+.letter-container div.image {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+/* line 52, ../sass/main.scss */
+.letter-container.active .letter {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/* line 55, ../sass/main.scss */
+.letter-container.active .image {
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  -ms-transform: rotateX(0deg) rotateY(0deg);
+  -o-transform: rotateX(0deg) rotateY(0deg);
+  transform: rotateX(0deg) rotateY(0deg);
+}
